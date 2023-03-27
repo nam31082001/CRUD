@@ -1,0 +1,59 @@
+<div class="content">
+    <h1>Todo List </h1>
+    <form action="/store" method="POST">
+        <div class="row">
+            <div class="col-25">
+                <label for="fname"> Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fname" name="name" placeholder="Your name..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Time</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="lname" name="time" placeholder="Your last time..">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <h2>List</h2>
+    <div class="list">
+
+        <table id="customers">
+            <tr>
+                <th>Name</th>
+                <th>Time</th>
+                <th>Edit</th>
+            </tr>
+            {{#each todo}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.time}}</td>
+                <td>
+                    <button >Xóa</button>
+                    <button>Sửa</button>
+                </td>
+            </tr>
+
+            {{/each}}
+
+        </table>
+
+    </div>
+
+</div>
+
+<script>
+    // btn_delete
+
+    var btnDelete = document.querySelectorAll('.btn_delete')
+   
+function han()
+
+</script>
