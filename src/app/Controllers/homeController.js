@@ -10,10 +10,17 @@ class homeController {
             .catch(next)
     }
     store(req, res, next) {
-        const todo = new Todo(req.body)
-        todo.save()
-            .then(() => res.redirect('/'))
-            .catch(next)
+        res.json(req.body)
+        // const todo = new Todo(req.body)
+        // todo.save()
+        //     .then(() => res.redirect('/'))
+        //     .catch(next)
+    }
+    delete(req,res,next){
+        const {id}=req.params
+        Todo.findOneAndDelete(id)
+       .then(() => res.redirect('/'))
+       .catch(next)
     }
 }
 module.exports = new homeController();

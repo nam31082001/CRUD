@@ -6,15 +6,15 @@
                 <label for="fname"> Name</label>
             </div>
             <div class="col-75">
-                <input type="text" id="fname" name="name" placeholder="Your name..">
+                <input type="text" id="fname" name="fname" placeholder="Your name..">
             </div>
         </div>
         <div class="row">
             <div class="col-25">
-                <label for="lname">Time</label>
+                <label for="tname">Time</label>
             </div>
             <div class="col-75">
-                <input type="text" id="lname" name="time" placeholder="Your last time..">
+                <input type="text" id="tname" name="tname" placeholder="Your last time..">
             </div>
         </div>
         <br>
@@ -36,7 +36,9 @@
                 <td>{{this.name}}</td>
                 <td>{{this.time}}</td>
                 <td>
-                    <button >Xóa</button>
+                    {{!-- <form action="/delete/{{this._id}}" method="POST">
+                        <button type="submit">Delete</button>
+                    </form> --}}
                     <button>Sửa</button>
                 </td>
             </tr>
@@ -52,8 +54,6 @@
 <script>
     // btn_delete
 
-    var btnDelete = document.querySelectorAll('.btn_delete')
-   
-function han()
+
 
 </script>

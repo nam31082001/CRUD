@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const Todo = new Schema({
-    name: { type: String },
-    time: { type: String },
+    name: { type: String,require:true },
+    time: { type: String,require:true },
     createdAt: { type: Date, default: Date.now },
     updateAt: { type: Date, default: Date.now }
 }, {
