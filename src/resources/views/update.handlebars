@@ -1,0 +1,23 @@
+
+<form action="/store/{{todo._id}}?_method=PUT" method="POST">
+    <div class="row">
+        <div class="col-25">
+            <label for="fname"> Name</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="name" name="name" value="{{todo.name}}" placeholder="Your name..">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="tname">Time</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="tname" name="time" value="{{todo.time}}" placeholder="Your last time..">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div>
+</form>

@@ -25,6 +25,8 @@
     "mongoose": "^7.0.3"
   },
   "devDependencies": {
+    "body-parser": "^1.20.2",
+    "experss": "^0.0.1-security",
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.22"
   }

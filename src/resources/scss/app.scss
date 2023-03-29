@@ -15,6 +15,8 @@ body {
     width: 50%;
     height: 600px;
     background: rgb(209, 201, 201);
+    overflow-y: scroll;
+    overflow-x:hidden;
 
     * {
         padding: 10px 0 10px 5px;

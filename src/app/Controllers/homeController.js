@@ -1,5 +1,5 @@
 const Todo = require('../models/Todo')
-const { mutipleMongooseToObject } = require('../../util/mongoose')
+const { mutipleMongooseToObject, mongooseToObject } = require('../../util/mongoose')
 
 class homeController {
     get(req, res, next) {
@@ -10,17 +10,30 @@ class homeController {
             .catch(next)
     }
     store(req, res, next) {
-        res.json(req.body)
-        // const todo = new Todo(req.body)
-        // todo.save()
-        //     .then(() => res.redirect('/'))
-        //     .catch(next)
+        const todo = new Todo(req.body)
+        todo.save()
+            .then(() => res.redirect('/'))
+            .catch(next)
     }
-    delete(req,res,next){
-        const {id}=req.params
+    delete(req, res, next) {
+        const { id } = req.params
         Todo.findOneAndDelete(id)
-       .then(() => res.redirect('/'))
-       .catch(next)
+            .then(() => res.redirect('/'))
+            .catch(next)
+    }
+    update(req, res, next) {
+        const { id } = req.params
+        Todo.findById(id)
+            .then(todo => res.render('update',
+                { todo: mongooseToObject(todo) }
+            ))
+            .catch(next)
+
+    }
+    save(req,res,next){
+        Todo.updateOne({_id:req.params.id},req.body)
+        .then(()=>res.redirect('/'))
+        .catch(next)
     }
 }
 module.exports = new homeController();

@@ -12,7 +12,9 @@ body {
 .content {
   width: 50%;
   height: 600px;
-  background: #d1c9c9; }
+  background: #d1c9c9;
+  overflow-y: scroll;
+  overflow-x: hidden; }
   .content * {
     padding: 10px 0 10px 5px; }
   .content .list {
